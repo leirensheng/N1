@@ -1,0 +1,10 @@
+{
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "ccr-dataproc",
+    "host": "192.168.1.201",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  }
+}

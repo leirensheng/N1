@@ -1,0 +1,625 @@
+{
+  "config": {
+    "session": {
+      "maxAge": 86400000,
+      "key": "EGG_SESS",
+      "httpOnly": true,
+      "encrypt": true,
+      "overwrite": true,
+      "signed": true,
+      "autoCommit": true,
+      "encode": "<Function encode>",
+      "decode": "<Function decode>",
+      "genid": "<Function v4>"
+    },
+    "security": {
+      "domainWhiteList": [],
+      "protocolWhiteList": [],
+      "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
+      "csrf": {
+        "enable": false,
+        "type": "ctoken",
+        "ignoreJSON": false,
+        "useSession": false,
+        "cookieName": "csrfToken",
+        "sessionName": "csrfToken",
+        "headerName": "x-csrf-token",
+        "bodyName": "_csrf",
+        "queryName": "_csrf",
+        "refererWhiteList": []
+      },
+      "xframe": {
+        "enable": true,
+        "value": "SAMEORIGIN",
+        "matching": "<Function anonymous>"
+      },
+      "hsts": {
+        "enable": false,
+        "maxAge": 31536000,
+        "includeSubdomains": false
+      },
+      "dta": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "methodnoallow": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "noopen": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "nosniff": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "referrerPolicy": {
+        "enable": false,
+        "value": "no-referrer-when-downgrade"
+      },
+      "xssProtection": {
+        "enable": true,
+        "value": "1; mode=block",
+        "matching": "<Function anonymous>"
+      },
+      "csp": {
+        "enable": false,
+        "policy": {}
+      },
+      "ssrf": {
+        "ipBlackList": null,
+        "checkAddress": null
+      },
+      "_protocolWhiteListSet": "<Set>"
+    },
+    "helper": {
+      "shtml": {}
+    },
+    "jsonp": {
+      "limit": 50,
+      "callback": [
+        "_callback",
+        "callback"
+      ],
+      "csrf": false
+    },
+    "onerror": {
+      "errorPageUrl": "",
+      "appErrorFilter": null,
+      "templatePath": "F:\\N1\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\lib\\onerror_page.mustache"
+    },
+    "i18n": {
+      "defaultLocale": "en_US",
+      "dirs": [
+        "F:\\N1\\node_modules\\_egg-session@3.2.0@egg-session\\config\\locales",
+        "F:\\N1\\node_modules\\_egg-security@2.8.0@egg-security\\config\\locales",
+        "F:\\N1\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp\\config\\locales",
+        "F:\\N1\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\config\\locales",
+        "F:\\N1\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\locales",
+        "F:\\N1\\node_modules\\_egg-watcher@3.1.1@egg-watcher\\config\\locales",
+        "F:\\N1\\node_modules\\_egg-schedule@3.6.6@egg-schedule\\config\\locales",
+        "F:\\N1\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\locales",
+        "F:\\N1\\node_modules\\_egg-development@2.7.0@egg-development\\config\\locales",
+        "F:\\N1\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\locales",
+        "F:\\N1\\node_modules\\_egg-static@2.2.0@egg-static\\config\\locales",
+        "F:\\N1\\node_modules\\_egg-view@2.1.3@egg-view\\config\\locales",
+        "F:\\N1\\node_modules\\_egg-router-plus@1.3.1@egg-router-plus\\config\\locales",
+        "F:\\N1\\node_modules\\_egg-socket.io@4.1.6@egg-socket.io\\config\\locales",
+        "F:\\N1\\node_modules\\_egg@2.29.1@egg\\config\\locales",
+        "F:\\N1\\config\\locales"
+      ],
+      "queryField": "locale",
+      "cookieField": "locale",
+      "cookieDomain": "",
+      "cookieMaxAge": "1y",
+      "functionName": "__"
+    },
+    "watcher": {
+      "type": "development",
+      "eventSources": {
+        "default": "F:\\N1\\node_modules\\_egg-watcher@3.1.1@egg-watcher\\lib\\event-sources\\default",
+        "development": "F:\\N1\\node_modules\\_egg-watcher@3.1.1@egg-watcher\\lib\\event-sources\\development"
+      }
+    },
+    "customLogger": {
+      "scheduleLogger": {
+        "consoleLevel": "NONE",
+        "file": "egg-schedule.log"
+      }
+    },
+    "schedule": {
+      "directory": []
+    },
+    "multipart": {
+      "mode": "stream",
+      "autoFields": false,
+      "defaultCharset": "utf8",
+      "fieldNameSize": 100,
+      "fieldSize": 102400,
+      "fields": 10,
+      "fileSize": 53687091200,
+      "files": 10,
+      "fileExtensions": [
+        ".md",
+        ".txt",
+        ".vue",
+        ".wav",
+        ".jpg",
+        ".exe",
+        ".xls",
+        ".xlsx",
+        ".ppt",
+        ".pptx",
+        ".csv",
+        ".doc",
+        ".docx",
+        ".7z",
+        ".apk",
+        ".rar",
+        ".pdf",
+        ".msi",
+        ".flac",
+        ".ttf",
+        ".woff",
+        ".scss",
+        ".sql",
+        "model",
+        "h5",
+        "labels",
+        "vocab"
+      ],
+      "whitelist": null,
+      "tmpdir": "C:\\Users\\leire\\AppData\\Local\\Temp\\egg-multipart-tmp\\hdfs-server",
+      "cleanSchedule": {
+        "cron": "0 30 4 * * *"
+      }
+    },
+    "development": {
+      "watchDirs": [],
+      "ignoreDirs": [],
+      "fastReady": false,
+      "reloadOnDebug": true,
+      "overrideDefault": false,
+      "overrideIgnore": false
+    },
+    "logrotator": {
+      "filesRotateByHour": null,
+      "hourDelimiter": "-",
+      "filesRotateBySize": null,
+      "maxFileSize": 52428800,
+      "maxFiles": 10,
+      "rotateDuration": 60000,
+      "maxDays": 31
+    },
+    "static": {
+      "prefix": "/public/",
+      "dir": "F:\\N1\\app\\public",
+      "dynamic": true,
+      "preload": false,
+      "buffer": false,
+      "maxFiles": 1000
+    },
+    "view": {
+      "root": "F:\\N1\\app\\view",
+      "cache": false,
+      "defaultExtension": ".html",
+      "defaultViewEngine": "",
+      "mapping": {}
+    },
+    "io": {
+      "init": {
+        "path": "/socket.io",
+        "allowRequest": "<Function bound >"
+      },
+      "namespace": {
+        "/": {
+          "connectionMiddleware": [],
+          "packetMiddleware": []
+        }
+      }
+    },
+    "env": "local",
+    "name": "hdfs-server",
+    "keys": "<String len: 0>",
+    "cookies": {},
+    "proxy": false,
+    "maxIpsCount": 0,
+    "maxProxyCount": 0,
+    "protocolHeaders": "x-forwarded-proto",
+    "ipHeaders": "x-forwarded-for",
+    "hostHeaders": "",
+    "pkg": {
+      "name": "hdfs-server",
+      "version": "1.0.0",
+      "description": "webhdfs服务",
+      "private": true,
+      "scripts": {
+        "start": "egg-scripts start --daemon --title=hdfs-service",
+        "start-dev": "egg-scripts start --daemon --env=dev --port=${PORT:-7002} --workers=${WORKERS:-4} --title=hdfs-service --sticky",
+        "start-local": "egg-scripts start --daemon --env=local --port=${PORT:-7002} --workers=${WORKERS:-4} --title=hdfs-service --sticky",
+        "restart-dev": "npm run stop && npm run start-dev",
+        "start-test": "egg-scripts start --daemon --env=test --port=${PORT:-7002} --workers=${WORKERS:-4} --title=hdfs-service --sticky",
+        "restart-test": "npm run stop && npm run start-test",
+        "start-uat": "egg-scripts start --daemon --env=uat --port=${PORT:-7002} --workers=${WORKERS:-4} --title=hdfs-service --sticky",
+        "restart-uat": "npm run stop && npm run start-uat",
+        "stop": "egg-scripts stop --title=hdfs-service",
+        "dev": "egg-bin dev",
+        "debug": "egg-bin debug",
+        "test": "npm run lint -- --fix && npm run test-local",
+        "test-local": "egg-bin test",
+        "cov": "egg-bin cov",
+        "lint": "eslint .",
+        "ci": "npm run lint && npm run cov",
+        "autod": "autod"
+      },
+      "dependencies": {
+        "async-validator": "^3.2.3",
+        "circuit-fuses": "^4.0.4",
+        "compressing": "^1.5.1",
+        "egg": "^2.29.1",
+        "egg-mongoose": "^3.3.1",
+        "egg-router-plus": "^1.3.1",
+        "egg-scripts": "^2.13.0",
+        "egg-sequelize": "^5.2.1",
+        "egg-socket.io": "^4.1.6",
+        "fs-extra": "^8.1.0",
+        "koa-compress": "^3.0.0",
+        "koa-logger": "^3.2.1",
+        "mysql2": "^2.1.0",
+        "node-rsa": "^1.0.7",
+        "node-snowflake": "^0.0.1",
+        "randomstring": "^1.1.5",
+        "request": "^2.88.2",
+        "sequelize-cli": "^5.5.1",
+        "simple-ssh": "^1.0.0",
+        "tar": "^6.0.1",
+        "validator": "^12.2.0",
+        "webhdfs": "^1.2.0",
+        "xlsx": "^0.16.8"
+      },
+      "devDependencies": {
+        "autod": "^3.0.1",
+        "autod-egg": "^1.1.0",
+        "egg-bin": "^4.9.0",
+        "egg-ci": "^1.10.0",
+        "egg-mock": "^3.20.1",
+        "eslint": "^5.9.0",
+        "eslint-config-egg": "^7.1.0",
+        "sequelize-cli": "^5.5.1",
+        "webstorm-disable-index": "^1.2.0"
+      },
+      "engines": {
+        "node": ">=8.9.0"
+      },
+      "ci": {
+        "version": "8"
+      },
+      "repository": {
+        "type": "git",
+        "url": ""
+      },
+      "eslintIgnore": [
+        "coverage"
+      ],
+      "author": "leirensheng",
+      "license": "MIT"
+    },
+    "baseDir": "F:\\N1",
+    "HOME": "C:\\Users\\leire",
+    "rundir": "F:\\N1\\run",
+    "dump": {
+      "ignore": "<Set>"
+    },
+    "confusedConfigurations": {
+      "bodyparser": "bodyParser",
+      "notFound": "notfound",
+      "sitefile": "siteFile",
+      "middlewares": "middleware",
+      "httpClient": "httpclient"
+    },
+    "notfound": {
+      "pageUrl": ""
+    },
+    "siteFile": {
+      "/favicon.ico": "<Buffer len: 6463>"
+    },
+    "bodyParser": {
+      "enable": true,
+      "encoding": "utf8",
+      "formLimit": "1mb",
+      "jsonLimit": "1mb",
+      "textLimit": "1mb",
+      "strict": true,
+      "queryString": {
+        "arrayLimit": 100,
+        "depth": 5,
+        "parameterLimit": 1000
+      },
+      "returnRawBody": true
+    },
+    "logger": {
+      "dir": "F:\\N1\\logs\\hdfs-server",
+      "encoding": "utf8",
+      "env": "local",
+      "level": "INFO",
+      "consoleLevel": "INFO",
+      "disableConsoleAfterReady": false,
+      "outputJSON": false,
+      "buffer": true,
+      "appLogName": "hdfs-server-web.log",
+      "coreLogName": "egg-web.log",
+      "agentLogName": "egg-agent.log",
+      "errorLogName": "common-error.log",
+      "coreLogger": {
+        "consoleLevel": "WARN"
+      },
+      "allowDebugAtProd": false,
+      "type": "application"
+    },
+    "httpclient": {
+      "enableDNSCache": false,
+      "dnsCacheLookupInterval": 10000,
+      "dnsCacheMaxLength": 1000,
+      "request": {
+        "timeout": 5000
+      },
+      "httpAgent": {
+        "keepAlive": true,
+        "freeSocketTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      },
+      "httpsAgent": {
+        "keepAlive": true,
+        "freeSocketTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      }
+    },
+    "meta": {
+      "enable": true,
+      "logging": false
+    },
+    "coreMiddleware": [
+      "meta",
+      "siteFile",
+      "notfound",
+      "static",
+      "bodyParser",
+      "overrideMethod",
+      "session",
+      "securities",
+      "i18n",
+      "eggLoaderTrace"
+    ],
+    "workerStartTimeout": 600000,
+    "serverTimeout": null,
+    "cluster": {
+      "listen": {
+        "path": "",
+        "port": 7001,
+        "hostname": ""
+      }
+    },
+    "clusterClient": {
+      "maxWaitTime": 60000,
+      "responseTimeout": 60000
+    },
+    "onClientError": null,
+    "context": "",
+    "middleware": [
+      "requestLogger",
+      "compress",
+      "errorHandler",
+      "formatParams",
+      "payload",
+      "validator"
+    ],
+    "remote": {
+      "webhdfs": "http://192.168.1.212:50070/webhdfs/v1"
+    },
+    "getUser": {
+      "ignore": "<Function ignore>"
+    },
+    "authority": {
+      "match": "<Function match>"
+    },
+    "requestLogger": {
+      "enable": true
+    },
+    "ssh": {
+      "host": "192.168.1.213",
+      "user": "root",
+      "pass": "<String len: 4>"
+    },
+    "maxTask": 5,
+    "coreMiddlewares": "~config~coreMiddleware",
+    "appMiddlewares": "~config~middleware",
+    "appMiddleware": "~config~middleware",
+    "multipartParseOptions": {
+      "autoFields": false,
+      "defCharset": "utf8",
+      "limits": {
+        "fieldNameSize": 100,
+        "fieldSize": 102400,
+        "fields": 10,
+        "fileSize": 53687091200,
+        "files": 10
+      },
+      "checkFile": "<Function checkFile>"
+    }
+  },
+  "plugins": {
+    "onerror": {
+      "enable": true,
+      "package": "egg-onerror",
+      "name": "onerror",
+      "dependencies": [],
+      "optionalDependencies": [
+        "jsonp"
+      ],
+      "env": [],
+      "from": "F:\\N1\\node_modules\\_egg@2.29.1@egg\\config\\plugin.js",
+      "path": "F:\\N1\\node_modules\\_egg-onerror@2.1.0@egg-onerror",
+      "version": "2.1.0"
+    },
+    "session": {
+      "enable": true,
+      "package": "egg-session",
+      "name": "session",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "F:\\N1\\node_modules\\_egg@2.29.1@egg\\config\\plugin.js",
+      "path": "F:\\N1\\node_modules\\_egg-session@3.2.0@egg-session",
+      "version": "3.2.0"
+    },
+    "i18n": {
+      "enable": true,
+      "package": "egg-i18n",
+      "name": "i18n",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "F:\\N1\\node_modules\\_egg@2.29.1@egg\\config\\plugin.js",
+      "path": "F:\\N1\\node_modules\\_egg-i18n@2.1.1@egg-i18n",
+      "version": "2.1.1"
+    },
+    "watcher": {
+      "enable": true,
+      "package": "egg-watcher",
+      "name": "watcher",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "F:\\N1\\node_modules\\_egg@2.29.1@egg\\config\\plugin.js",
+      "path": "F:\\N1\\node_modules\\_egg-watcher@3.1.1@egg-watcher",
+      "version": "3.1.1"
+    },
+    "multipart": {
+      "enable": true,
+      "package": "egg-multipart",
+      "name": "multipart",
+      "dependencies": [],
+      "optionalDependencies": [
+        "schedule"
+      ],
+      "env": [],
+      "from": "F:\\N1\\node_modules\\_egg@2.29.1@egg\\config\\plugin.js",
+      "path": "F:\\N1\\node_modules\\_egg-multipart@2.10.3@egg-multipart",
+      "version": "2.10.3"
+    },
+    "security": {
+      "enable": true,
+      "package": "egg-security",
+      "name": "security",
+      "dependencies": [],
+      "optionalDependencies": [
+        "session"
+      ],
+      "env": [],
+      "from": "F:\\N1\\node_modules\\_egg@2.29.1@egg\\config\\plugin.js",
+      "path": "F:\\N1\\node_modules\\_egg-security@2.8.0@egg-security",
+      "version": "2.8.0"
+    },
+    "development": {
+      "enable": true,
+      "package": "egg-development",
+      "name": "development",
+      "dependencies": [
+        "watcher"
+      ],
+      "optionalDependencies": [],
+      "env": [
+        "local"
+      ],
+      "from": "F:\\N1\\node_modules\\_egg@2.29.1@egg\\config\\plugin.js",
+      "path": "F:\\N1\\node_modules\\_egg-development@2.7.0@egg-development",
+      "version": "2.7.0"
+    },
+    "logrotator": {
+      "enable": true,
+      "package": "egg-logrotator",
+      "name": "logrotator",
+      "dependencies": [
+        "schedule"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "F:\\N1\\node_modules\\_egg@2.29.1@egg\\config\\plugin.js",
+      "path": "F:\\N1\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator",
+      "version": "3.1.0"
+    },
+    "schedule": {
+      "enable": true,
+      "package": "egg-schedule",
+      "name": "schedule",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "F:\\N1\\node_modules\\_egg@2.29.1@egg\\config\\plugin.js",
+      "path": "F:\\N1\\node_modules\\_egg-schedule@3.6.6@egg-schedule",
+      "version": "3.6.6"
+    },
+    "static": {
+      "enable": true,
+      "package": "egg-static",
+      "name": "static",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "F:\\N1\\node_modules\\_egg@2.29.1@egg\\config\\plugin.js",
+      "path": "F:\\N1\\node_modules\\_egg-static@2.2.0@egg-static",
+      "version": "2.2.0"
+    },
+    "jsonp": {
+      "enable": true,
+      "package": "egg-jsonp",
+      "name": "jsonp",
+      "dependencies": [],
+      "optionalDependencies": [
+        "security"
+      ],
+      "env": [],
+      "from": "F:\\N1\\node_modules\\_egg@2.29.1@egg\\config\\plugin.js",
+      "path": "F:\\N1\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp",
+      "version": "2.0.0"
+    },
+    "view": {
+      "enable": true,
+      "package": "egg-view",
+      "name": "view",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "F:\\N1\\node_modules\\_egg@2.29.1@egg\\config\\plugin.js",
+      "path": "F:\\N1\\node_modules\\_egg-view@2.1.3@egg-view",
+      "version": "2.1.3"
+    },
+    "routerPlus": {
+      "enable": true,
+      "package": "egg-router-plus",
+      "name": "routerPlus",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "F:\\N1\\config\\plugin.js",
+      "path": "F:\\N1\\node_modules\\_egg-router-plus@1.3.1@egg-router-plus",
+      "version": "1.3.1"
+    },
+    "io": {
+      "enable": true,
+      "package": "egg-socket.io",
+      "name": "io",
+      "dependencies": [
+        "session"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "F:\\N1\\config\\plugin.js",
+      "path": "F:\\N1\\node_modules\\_egg-socket.io@4.1.6@egg-socket.io",
+      "version": "4.1.6"
+    }
+  }
+}
